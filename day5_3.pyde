@@ -1,5 +1,5 @@
-xCoordinate = random(115, 200)
-yCoordinate = random(115, 200)
+xCoordinate = 200
+yCoordinate = 385
 speed = 2
 ySpeed = 1
 ellipseSize = 20
@@ -19,7 +19,7 @@ def draw():
     if yCoordinate >= rightBottomBoundary or yCoordinate <= leftTopBoundary:
         print("b")
         ySpeed = -ySpeed
-    if yCoordinate <= 75:
+    if yCoordinate <= 65 and :
         print("c")
         ySpeed=-ySpeed
         
