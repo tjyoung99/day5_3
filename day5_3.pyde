@@ -4,7 +4,7 @@ speed = 1
 ySpeed =1
 ellipseSize = 20
 brick= 50+ ellipseSize/2
-hit1= yCoordinate == brick and xCoordinate< 100 and xCoordinate>0
+hit1= yCoordinate >= brick and yCoordinate <= brick + 5  and xCoordinate< 100 and xCoordinate>0
 hit2=yCoordinate == brick and xCoordinate< 200 and xCoordinate>100
 hit3=yCoordinate == brick and xCoordinate< 300 and xCoordinate>200
 hit4=yCoordinate == brick and xCoordinate< 400 and xCoordinate>300
@@ -24,13 +24,15 @@ def draw():
         speed = -speed
     if yCoordinate >= rightBottomBoundary or yCoordinate <= leftTopBoundary:
         ySpeed = -ySpeed
+    if hit1:
+        hit1 = True
+        nohit1= False
+        fill(0, 7, 68)
+        rect(0,0,100,50)
     if nohit1:
         fill(255,0,0)
         rect(0,0,100,50)
-    elif hit1:
-        nohit1= False
-        fill(0, 78, 90)
-        rect(100,0,100,50)
+    
         
     
     
